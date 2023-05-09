@@ -1,26 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1>TODO APP</h1>
+    <PostTodo @onClick="postTodo" />
+    <div>TODO一覧</div>
+    <ul v-for="(todo, i) in todos" :key="i">
+      <ListTodo :todo="todo" />
+    </ul>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PostTodo from "./components/PostTodo.vue";
+import ListTodo from "./components/ListTodo.vue";
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    PostTodo,
+    ListTodo,
+  },
+  data() {
+    return {
+      todos: [],
+    };
+  },
+  methods: {
+    postTodo(value) {
+      this.todos.push({
+        todo: value,
+        isCheck: false,
+      });
+    },
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

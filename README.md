@@ -1,24 +1,20 @@
-# todo-app
+# Todo アプリケーション
 
-## Project setup
-```
-npm install
-```
+こちらは、Vue.js を利用して作成した Todo App です。  
+目的としては、Vue.js を勉強のために作成しました。
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## インストール方法
 
-### Compiles and minifies for production
 ```
-npm run build
+$ git clone xxxxxx
+$ cd xxxxx
+$ npm install
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+## 使用方法
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+サーバーを起動コマンド
+
+```
+$ npm run serve
+```

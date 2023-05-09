@@ -6,8 +6,8 @@
 ## インストール方法
 
 ```
-$ git clone xxxxxx
-$ cd xxxxx
+$ git clone https://github.com/TakahiroT0415156/vue-todo-app.git
+$ cd vue-todo-app
 $ npm install
 ```
 
